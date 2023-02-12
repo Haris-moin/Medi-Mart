@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import React, {useState} from 'react';
+import React from 'react';
 import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 const SignIn = ({onPageChange}) => {

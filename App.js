@@ -11,8 +11,9 @@ import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Lottie from 'lottie-react-native';
-import SignIn from './components/signIn';
-import {SignUp} from './components/signUp';
+import SignIn from './src/components/auth/signIn';
+import {SignUp} from './src/components/auth/signUp';
+import DeshBoard from './src/components/deshboard';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,11 +37,12 @@ const App = () => {
       <LinearGradient
         colors={['#fff', '#f7f3fb', '#e8ddf2']}
         style={styles.linearGradient}>
-        {isSignIn ? (
+        <DeshBoard />
+        {/* {isSignIn ? (
           <SignIn onPageChange={onPageChange} />
         ) : (
           <SignUp onPageChange={onPageChange} />
-        )}
+        )} */}
       </LinearGradient>
     </SafeAreaView>
   );
